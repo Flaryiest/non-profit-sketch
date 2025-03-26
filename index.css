@@ -126,7 +126,7 @@ table {
 
   --primary-background-color: #ffffff;
   --secondary-background-color: #ffe8e5;
-  --primary-text-color: #4f4f4f;
+  --primary-text-color: #0f0f0f;
   --secondary-text-color: #ae838e;
   --primary-accent-color: #eabfb9;
 
@@ -143,6 +143,7 @@ table {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
 }
 
 body {
@@ -182,8 +183,46 @@ button {
   max-width: 100dvw;
   box-sizing: border-box;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
   overflow-x: hidden;
-  margin-top: 30px;
+  margin-top: 10px;
+}
+
+.section {
+    width: 100%;
+    max-width: 1024px;
+    box-sizing: border-box;
+    display: flex;
+}
+
+.header {
+    width: 90%;
+    max-width: 1024px;
+    display: flex;
+    margin: 10px 10px;
+    padding: 10px 40px;
+    max-height: 64px;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 16px;
+    border: solid 1px rgb(197, 197, 197);
+    box-shadow: 0px 0px 2px 2px rgba(194, 194, 194, 0.1);
+    position: sticky;
+}
+
+.logo {
+    font-weight: 600;
+    font-size: 1.7rem;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: clamp(1.5rem, 2.5vw, 4rem);
+}
+
+.nav-link {
+    font-weight: 500;
 }
