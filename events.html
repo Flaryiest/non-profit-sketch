@@ -3,6 +3,7 @@
     <head>
         <meta charset="utf-8">
         <link rel="stylesheet" href="./index.css">
+        <link rel="stylesheet" href="./events.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,6 +19,26 @@
                     <a href="organization.html" class="nav-link">Organization</a>
                 </nav>
             </header>
+            <div class="section events">
+                <h2 class="events-header">UwU</h2>
+                <button class="button" id="uwuButton">UwU</button>
+            </div>
+            
+            <div id="uwuToast" class="toast">UwU</div>
         </div>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                const uwuButton = document.getElementById('uwuButton');
+                const toast = document.getElementById('uwuToast');
+                
+                uwuButton.addEventListener('click', function() {
+                    toast.classList.add('show');
+                    setTimeout(function() {
+                        toast.classList.remove('show');
+                    }, 3000);
+                });
+            });
+        </script>
     </body>
 </html>
